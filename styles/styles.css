@@ -1,0 +1,65 @@
+:root {
+    --nav-height-lg: 4rem;
+}
+ 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Class styling */
+
+.nav-link {
+    text-decoration: none;
+}
+
+/* ID styling */
+
+#nav-bar {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: var(--nav-height-lg);
+    background-color: #bbb;
+}
+
+#nav-list {
+    display: flex;
+    font-size: 1rem;
+    list-style: none;
+    justify-content: right;
+}
+
+#welcome-section {
+    height: 100vh;
+    margin-top: var(--nav-height-lg);
+    background-color: aliceblue;
+}
+ 
+ /* Media queries */
+ 
+ /* Extra small devices (phones, 600px and down) */
+ @media only screen and (max-width: 600px) {
+    body {
+        background-color: red;
+    }
+ }
+
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+ /* @media only screen and (min-width: 600px) {...} */
+ 
+ /* Medium devices (landscape tablets, 768px and up) */
+ /*@media only screen and (min-width: 768px) {...} */
+ 
+ /* Large devices (laptops/desktops, 992px and up) */
+ /*@media only screen and (min-width: 992px) {...}*/
+ 
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
+ /*@media only screen and (min-width: 1200px) {...} */
