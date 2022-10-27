@@ -1,5 +1,10 @@
 :root {
-    --nav-height-lg: 4rem;
+    --nav-height-lg: 8%;
+    --dark-grey: #232326;
+    --light-grey: #515157;
+    --electric-blue: #0860d0;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
  
 *,
@@ -10,56 +15,112 @@
     padding: 0;
 }
 
+/** Element styling **/
+
 html {
     font-family: 'Quicksand', sans-serif;
+    background-color: var(--dark-grey);
 }
 
-/* Class styling */
-
-.nav-link {
+a {
     text-decoration: none;
 }
 
-/* ID styling */
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+/** Class styling **/
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.75rem;
+    flex: 1;
+}
+
+/** ID styling **/
+
+/* nav section */
 
 #nav-bar {
     position: fixed;
     top: 0;
-    width: 100vw;
+    width: 100%;
     height: var(--nav-height-lg);
-    background-color: #bbb;
+    background-color: var(--electric-blue);
 }
 
 #nav-list {
     display: flex;
-    font-size: 1rem;
-    list-style: none;
-    justify-content: right;
+    align-items: center;
+    list-style: none;  
+    height: 100%;
 }
+
+#nav-list li {
+    flex: 1;
+    text-align: center;
+}
+
+/* welcome section */
 
 #welcome-section {
     height: 100vh;
-    margin-top: var(--nav-height-lg);
-    background-color: aliceblue;
+    margin: 0 auto;
+    background-color: var(--dark-grey);
+    color: white;
+    text-align: center;
+}
+
+#welcome-txt {
+    position: relative;
+    top: calc(50% - var(--nav-height-lg));
+}
+
+#me {
+    color: #0860d0;
+    font-weight: bolder;
+}
+
+/* projects section */
+
+#projects {
+    background-color: #515157;
 }
  
- /* Media queries */
+/** Media queries **/
  
- /* Extra small devices (phones, 600px and down) */
- @media only screen and (max-width: 600px) {
-    body {
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+   body {
         background-color: red;
-    }
- }
+   }
+}
 
- /* Small devices (portrait tablets and large phones, 600px and up) */
- /* @media only screen and (min-width: 600px) {...} */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {...} */
  
- /* Medium devices (landscape tablets, 768px and up) */
- /*@media only screen and (min-width: 768px) {...} */
+/* Medium devices (landscape tablets, 768px and up) */
+/*@media only screen and (min-width: 768px) {...} */
  
- /* Large devices (laptops/desktops, 992px and up) */
- /*@media only screen and (min-width: 992px) {...}*/
+/* Large devices (laptops/desktops, 992px and up) */
+/*@media only screen and (min-width: 992px) {...}*/
  
- /* Extra large devices (large laptops and desktops, 1200px and up) */
- /*@media only screen and (min-width: 1200px) {...} */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/*@media only screen and (min-width: 1200px) {...} */
+
+
+
+/* TESTING GROUNDS */
+
+.testblend {
+    height: 3rem;
+    width: 100%;
+    background: linear-gradient(var(--dark-grey) 25%, var(--light-grey) 75%);
+}
